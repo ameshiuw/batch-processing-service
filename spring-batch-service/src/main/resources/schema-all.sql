@@ -1,0 +1,13 @@
+DROP TABLE data IF EXISTS;
+
+CREATE TABLE data  (
+    id BIGINT NOT NULL PRIMARY KEY,
+    data VARCHAR(10),
+    device VARCHAR(10),
+    language VARCHAR(10),
+    msisdn VARCHAR(10)
+
+);
+
+ALTER TABLE data
+    MODIFY COLUMN id BIGINT NOT NULL AUTO_INCREMENT;
