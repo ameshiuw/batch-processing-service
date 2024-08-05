@@ -11,11 +11,11 @@ public class DataItemProcessor implements ItemProcessor<Item, Item> {
     @Override
     public Item process(final Item item) {
         final String data = item.data();
-        final String deviceType = item.device();
+        final String device = item.device();
         final String language = item.language();
         final String msisdn = item.msisdn();
 
-        final Item transformedPerson = new Item(data, deviceType, language, msisdn);
+        final Item transformedPerson = new Item(data, device, language, msisdn);
 
         log.info("Converting (" + item + ") into (" + transformedPerson + ")");
 
